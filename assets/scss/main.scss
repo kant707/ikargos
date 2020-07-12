@@ -4,6 +4,11 @@ body {
   font-family: 'Open Sans',sans-serif;
   line-height: 1.4;
 }
+.btn {
+  &:focus {
+    box-shadow: none;
+  }
+}
 .dropdown-menu {
   top: 115%;
   margin-top: -5px;
