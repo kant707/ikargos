@@ -88,6 +88,11 @@ body {
       }
       .nav-link {
         color: #fff;
+        transition: all ease-in-out 300ms;
+
+        &:hover {
+          color: #ec6729;
+        }
       }
     }
   }
