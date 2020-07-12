@@ -1,0 +1,192 @@
+@import "partials/gutter";
+
+body {
+  font-family: 'Open Sans',sans-serif;
+  line-height: 1.4;
+}
+.dropdown-menu {
+  top: 115%;
+  margin-top: -5px;
+}
+
+.dropdown-toggle {
+  &:after {
+    content: "\f107";
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    border: 0;
+    vertical-align: inherit;
+  }
+
+}
+
+.header-topbar {
+  background: #3a4951;
+  //position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 3;
+
+  .dropdown>.dropdown-toggle:active {
+    /*Without this, clicking will make it sticky*/
+    pointer-events: none;
+  }
+  .dropdown-toggle {
+    color: #fff;
+  }
+  .dropdown-menu {
+    &.show {
+      animation:dropdown-display .4s cubic-bezier(.73,.005,.22,1)
+    }
+    @keyframes dropdown-display{
+      0%{
+        opacity:0;
+        transform:scale(.98) translateY(-.6em)
+      }
+      to{
+        opacity:1;
+        transform:scale(1) translateY(0)
+      }
+    }
+  }
+  .dropdown-item {
+    padding: .25rem .6rem;
+    font-size: 14px;
+    font-weight: 300;
+  }
+}
+.brand-logo {
+  width: 160px;
+}
+.navbar {
+  //top: 32px;
+  position: absolute;
+  z-index: 3;
+  right: 0;
+  left: 0;
+
+  .navbar-nav {
+    .nav-item {
+      font-weight: 300;
+
+      &.login {
+        //border-left: 1px solid #ddd;
+        //margin-left: 10px;
+        margin-right: 10px;
+        //padding-left: 10px;
+      }
+      .nav-link {
+        color: #fff;
+      }
+    }
+  }
+}
+
+
+.carousel-wrapper {
+  position: relative;
+}
+.carousel-static-content {
+  background: rgba(0, 0, 0, 0.60);
+  position: absolute;
+  width: 100%;
+  //height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 24px;
+  left: 0;
+  z-index: 2;
+
+  .heading-content {
+    margin-top: 130px;
+    margin-bottom: 60px;
+    color: #fff;
+    h3 {
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 32px;
+      font-weight: 300;
+    }
+  }
+
+  .form-wrap {
+    padding: 25px;
+    border-radius: 4px;
+    background: rgba(256,256,256, .8);
+  }
+}
+.main-carousel {
+  z-index: initial;
+
+  .item {
+    height: 700px;
+    background-repeat: no-repeat;
+    background-position: center 0;
+    //background-size: contain;
+    background-size: 100% 100%;
+  }
+  .item-1 {
+    background-image: url("../images/cargo_port.jpg");
+  }
+  .item-2 {
+    background-image: url("../images/cargo_plane.jpg");
+  }
+  .item-3 {
+    background-image: url("../images/cargo_ship.jpg");
+  }
+
+  .owl-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+
+    .owl-prev,
+    .owl-next {
+      position: absolute;
+      transform: translateY(-50%);
+      top: 50%;
+      z-index: 3;
+
+      span {
+        font-size: 64px;
+        color: #fff;
+      }
+    }
+    .owl-prev {
+      left: 20px;
+    }
+    .owl-next {
+      right: 20px;
+    }
+  }
+
+  .owl-dots {
+    text-align: center;
+
+    .owl-dot {
+      margin-right: 8px;
+      margin-left: 8px;
+      &.active {
+        span {
+          background: #666;
+        }
+      }
+    }
+
+    span {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #ccc;
+    }
+  }
+}
