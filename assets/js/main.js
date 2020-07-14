@@ -42,4 +42,21 @@ $(document).ready(function(){
     items: 1,
   })
 
+  $('.destination').on('focus', function () {
+    $(this).parent().addClass('show');
+
+    $('body').on('mouseup', function(e)
+    {
+      let container = $(".destination-warp");
+
+      // if the target of the click isn't the container nor a descendant of the container
+      if (!container.is(e.target) && container.has(e.target).length === 0)
+      {
+        container.removeClass('show');
+      }
+    });
+
+
+  });
+
 });

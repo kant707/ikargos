@@ -133,7 +133,7 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 2;
+  //z-index: 2;
 
   .heading-content {
     margin-top: 130px;
@@ -183,14 +183,20 @@ body {
       }
       .destination-warp {
         position: relative;
+        &.show {
+          .destination-popover {
+            display: block;
+          }
+        }
 
         .destination-popover {
+          display: none;
           width: 632px;
           height: 342px;
           border-radius: 2px;
           position: absolute;
           top: 45px;
-          z-index: 2;
+          z-index: 4;
           background: #fff;
           box-shadow: 0 1px 10px 1px rgba(120, 120, 120, 0.3);
 
