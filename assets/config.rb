@@ -16,6 +16,9 @@ output_style = :compressed
 # relative_assets = true
 relative_assets = true
 
+# To enable sourcemap for related scss file.
+sass_options = {:sourcemap => true}
+
 # To disable debugging comments that display the original location of your selectors. Uncomment:
 # line_comments = false
 

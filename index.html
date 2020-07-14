@@ -97,7 +97,7 @@
             <a class="nav-link" href="#">Insurance</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Pricing & Enquiry</a>
+            <a class="nav-link" href="#">Pricing & Enquiries</a>
           </li>
           <li class="nav-item">
             <span class="nav-link">|</span>
@@ -110,7 +110,6 @@
           </li>
         </ul>
       </div>
-
     </div>
   </nav>
 </header>
@@ -133,7 +132,7 @@
               </p>
             </div>
             <div class="form-wrap">
-              <div class="d-flex">
+              <div class="d-flex mb20">
                 <div class="mr15">
                   <div class="form-check">
                     <input class="form-check-input" type="radio" name="importExport" id="import" value="option1" checked>
@@ -148,21 +147,143 @@
                     </label>
                   </div>
                 </div>
-                <div class="z">
+                <div class="ml50">
                   <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Dropdown button
+                    <button class="btn bg-white dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Transport
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <a class="dropdown-item" href="#">Something else here</a>
+                      <a class="dropdown-item" href="#">Air</a>
+                      <a class="dropdown-item" href="#">Sea</a>
+                      <a class="dropdown-item" href="#">Port</a>
                     </div>
                   </div>
                 </div>
+                <div class="ml-auto d-flex">
+                  <div class="">
+                    <i style="color: #3b87fd">References:</i>
+                  </div>
+                  <div class="ml20">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="neighbouringPorts">
+                      <label class="form-check-label" for="neighbouringPorts">Show neighbouring ports</label>
+                    </div>
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="onlyPorts">
+                      <label class="form-check-label" for="onlyPorts">Show By Ports only</label>
+                    </div>
+                  </div>
 
-
+                </div>
               </div>
+
+              <form class="quote-form">
+                <div class="form-row">
+                  <div class="col">
+                    <input type="text" class="form-control source" placeholder="Origin">
+                  </div>
+                  <div class="col">
+                    <div class="destination-warp">
+                      <input type="text" class="form-control destination" placeholder="Destination">
+                      <div class="destination-popover">
+                        <div class="container">
+                          <div class="row">
+                            <div class="col">
+                              <div class="x">
+                                <div class="alert alert-warning mb-0 fz12" role="alert">
+                                  <i class="fa fa-warning"></i>
+                                  Choose a port to Mumbai, INDIA in the list below.
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row row-eq-height">
+                            <div class="col">
+                              <ul class="list-group list-group-flush destination-result">
+                                <li class="list-group-item list-group-item-action active">
+                                  <div class="d-flex">
+                                    <div class="mr10">Lonavala</div>
+                                    <div class="ml-auto">MBN</div>
+                                  </div>
+                                  <div class="for-country">(Mumbai, India)</div>
+                                </li>
+                                <li class="list-group-item list-group-item-action">
+                                  <div class="d-flex">
+                                    <div class="mr10">London</div>
+                                    <div class="ml-auto">LDN</div>
+                                  </div>
+                                  <div class="for-country">(England, United States)</div>
+                                </li>
+                                <li class="list-group-item list-group-item-action">
+                                  <div class="d-flex">
+                                    <div class="mr10">Latvia</div>
+                                    <div class="ml-auto">LTV</div>
+                                  </div>
+                                  <div class="for-country">(Latvia, United States)</div>
+                                </li>
+                                <li class="list-group-item list-group-item-action">
+                                  <div class="d-flex">
+                                    <div class="mr10">Luxembourg</div>
+                                    <div class="ml-auto">LXB</div>
+                                  </div>
+                                  <div class="for-country">(England, United States)</div>
+                                </li>
+                                <li class="list-group-item list-group-item-action">
+                                  <div class="d-flex">
+                                    <div class="mr10">Lonavala</div>
+                                    <div class="ml-auto">MBN</div>
+                                  </div>
+                                  <div class="for-country">(Mumbai, India)</div>
+                                </li>
+                                <li class="list-group-item list-group-item-action">
+                                  <div class="d-flex">
+                                    <div class="mr10">London</div>
+                                    <div class="ml-auto">LDN</div>
+                                  </div>
+                                  <div class="for-country">(England, United States)</div>
+                                </li>
+                                <li class="list-group-item list-group-item-action">
+                                  <div class="d-flex">
+                                    <div class="mr10">Latvia</div>
+                                    <div class="ml-auto">LTV</div>
+                                  </div>
+                                  <div class="for-country">(Latvia, United States)</div>
+                                </li>
+                                <li class="list-group-item list-group-item-action">
+                                  <div class="d-flex">
+                                    <div class="mr10">Luxembourg</div>
+                                    <div class="ml-auto">LXB</div>
+                                  </div>
+                                  <div class="for-country">(England, United States)</div>
+                                </li>
+                                <li class="list-group-item list-group-item-action">
+                                  <div class="d-flex">
+                                    <div class="mr10">Lonavala</div>
+                                    <div class="ml-auto">MBN</div>
+                                  </div>
+                                  <div class="for-country">(Mumbai, India)</div>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="col">
+                              <iframe style="border-bottom-right-radius: 2px" width="316" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=316&amp;height=300&amp;hl=en&amp;q=%20Mumbai+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe> <a href='https://add-map.org/'>add google map to your website</a> <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=c87cb9cccfac511e8e6120977712ffab300adaa4'></script>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control load-type" placeholder="Load type">
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control inco-terms" placeholder="Inco Terms">
+                  </div>
+                  <div class="col">
+                    <button type="submit" class="btn btn-block">Get Quote</button>
+                  </div>
+                </div>
+              </form>
 
             </div>
           </div>
