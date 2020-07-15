@@ -51,6 +51,25 @@ body {
 
 }
 
+.popover-wrap {
+  position: relative;
+  &.show {
+    .popover-container {
+      display: block;
+    }
+  }
+
+  .popover-container {
+    display: none;
+    border-radius: 2px;
+    position: absolute;
+    top: 45px;
+    z-index: 4;
+    background: #fff;
+    box-shadow: 0 1px 10px 1px rgba(120, 120, 120, 0.3);
+  }
+}
+
 .header-topbar {
   background: #3a4951;
   //position: fixed;
@@ -175,30 +194,17 @@ body {
           background: #fff url("../images/icons/box.svg") no-repeat 2px center;
         }
       }
-      .btn {
+      .cta {
         background: #ec6729;
         min-height: 44px;
         color: #fff;
         text-transform: uppercase;
       }
       .destination-warp {
-        position: relative;
-        &.show {
-          .destination-popover {
-            display: block;
-          }
-        }
 
         .destination-popover {
-          display: none;
           width: 632px;
           height: 342px;
-          border-radius: 2px;
-          position: absolute;
-          top: 45px;
-          z-index: 4;
-          background: #fff;
-          box-shadow: 0 1px 10px 1px rgba(120, 120, 120, 0.3);
 
           .col {
             padding: 0;
@@ -230,6 +236,62 @@ body {
           }
         }
       }
+      .load-type-wrap {
+        .load-type-popover {
+          width: 500px;
+          min-height: 300px;
+          transform: translateX(-50%);
+          left: 50%;
+
+          .nav-link {
+            background: #f6f6f6;
+            color: #777;
+
+            &.active {
+              background: #fff;
+              color: #ec6729;
+              span {
+                color: #777;
+              }
+            }
+          }
+
+          #pills-fcl,
+          #pills-lcl {
+            .form-control {
+              padding-left: 10px;
+            }
+          }
+          #pills-fcl {
+            .increase-btn,
+            .decrease-btn {
+              height: 20px;
+              width: 20px;
+
+              .fa {
+                vertical-align: top;
+              }
+            }
+            .form-control {
+              width: 80px;
+            }
+            .container-length {
+              color: #8b8b8b;
+              font-weight: 600;
+            }
+            .container-dimensions {
+              color: #8b8b8b;
+            }
+          }
+          #pills-lcl {
+            .dropdown-toggle {
+              border: 1px solid #ccc;
+            }
+          }
+
+        }
+      }
+
     }
   }
 }

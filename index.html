@@ -173,7 +173,6 @@
                       <label class="form-check-label" for="onlyPorts">Show By Ports only</label>
                     </div>
                   </div>
-
                 </div>
               </div>
 
@@ -183,9 +182,9 @@
                     <input type="text" class="form-control source" placeholder="Origin">
                   </div>
                   <div class="col">
-                    <div class="destination-warp">
-                      <input type="text" class="form-control destination" placeholder="Destination">
-                      <div class="destination-popover">
+                    <div class="destination-warp popover-wrap">
+                      <input type="text" class="form-control trigger-input destination" placeholder="Destination" />
+                      <div class="destination-popover popover-container">
                         <div class="container">
                           <div class="row">
                             <div class="col">
@@ -274,13 +273,169 @@
                     </div>
                   </div>
                   <div class="col">
-                    <input type="text" class="form-control load-type" placeholder="Load type">
+                    <div class="popover-wrap load-type-wrap">
+                      <input type="text" class="form-control trigger-input load-type" placeholder="Load type" />
+                      <div class="popover-container load-type-popover">
+                        <div class="container">
+                          <div class="row">
+                            <div class="col p-0">
+                              <ul class="nav nav-pills mb-0 text-center text-uppercase fw600 fz18" id="pills-tab" role="tablist">
+                                <li class="nav-item w-50" role="presentation">
+                                  <a class="nav-link rounded-0 active" id="pills-fcl-tab" data-toggle="pill" href="#pills-fcl" role="tab" aria-controls="pills-home" aria-selected="true">
+                                    fcl
+                                    <span class="d-block fz14">full container</span>
+                                  </a>
+                                </li>
+                                <li class="nav-item w-50" role="presentation">
+                                  <a class="nav-link rounded-0" id="pills-lcl-tab" data-toggle="pill" href="#pills-lcl" role="tab" aria-controls="pills-profile" aria-selected="false">
+                                    lcl
+                                    <span class="d-block fz14">shared container</span>
+                                  </a>
+                                </li>
+                              </ul>
+                              <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade show active p20" id="pills-fcl" role="tabpanel" aria-labelledby="pills-home-tab">
+                                  <div class="container-row d-flex ptb10">
+                                    <div class="action-input d-flex">
+                                      <div class="plus-minus">
+                                        <div class="increase">
+                                          <button type="button" class="btn btn-outline-dark p0 increase-btn">
+                                            <i class="fa fa-angle-up"></i>
+                                          </button>
+                                        </div>
+                                        <div class="decrease">
+                                          <button type="button" class="btn btn-outline-dark p0 decrease-btn">
+                                            <i class="fa fa-angle-down"></i>
+                                          </button>
+                                        </div>
+                                      </div>
+                                      <input type="text" class="form-control ml15 mr20" />
+                                    </div>
+                                    <div class="action-for mr15">
+                                      <div class="container-length">20FT CONTAINER</div>
+                                      <div class="container-dimensions">20' x 8' x 8'6"</div>
+                                    </div>
+                                    <div class="container-img ml-auto">
+                                      <img src="assets/images/size-1.webp" alt="" />
+                                    </div>
+                                  </div>
+                                  <div class="container-row d-flex ptb10">
+                                    <div class="action-input d-flex">
+                                      <div class="plus-minus">
+                                        <div class="increase">
+                                          <button type="button" class="btn btn-outline-dark p0 increase-btn">
+                                            <i class="fa fa-angle-up"></i>
+                                          </button>
+                                        </div>
+                                        <div class="decrease">
+                                          <button type="button" class="btn btn-outline-dark p0 decrease-btn">
+                                            <i class="fa fa-angle-down"></i>
+                                          </button>
+                                        </div>
+                                      </div>
+                                      <input type="text" class="form-control ml15 mr20" />
+                                    </div>
+                                    <div class="action-for mr15">
+                                      <div class="container-length">20FT CONTAINER</div>
+                                      <div class="container-dimensions">20' x 8' x 8'6"</div>
+                                    </div>
+                                    <div class="container-img ml-auto">
+                                      <img src="assets/images/size-2.webp" alt="" />
+                                    </div>
+                                  </div>
+                                  <div class="container-row d-flex ptb10">
+                                    <div class="action-input d-flex">
+                                      <div class="plus-minus">
+                                        <div class="increase">
+                                          <button type="button" class="btn btn-outline-dark p0 increase-btn">
+                                            <i class="fa fa-angle-up"></i>
+                                          </button>
+                                        </div>
+                                        <div class="decrease">
+                                          <button type="button" class="btn btn-outline-dark p0 decrease-btn">
+                                            <i class="fa fa-angle-down"></i>
+                                          </button>
+                                        </div>
+                                      </div>
+                                      <input type="text" class="form-control ml15 mr20" />
+                                    </div>
+                                    <div class="action-for mr15">
+                                      <div class="container-length">20FT CONTAINER</div>
+                                      <div class="container-dimensions">20' x 8' x 8'6"</div>
+                                    </div>
+                                    <div class="container-img ml-auto">
+                                      <img src="assets/images/size-3.webp" alt="" />
+                                    </div>
+                                  </div>
+
+                                </div>
+                                <div class="tab-pane fade" id="pills-lcl" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                  <div class="p20">
+                                    <label for="weightInput">WEIGHT</label>
+                                    <div class="input-group mb15">
+                                      <input type="text" class="form-control" id="weightInput" />
+                                      <div class="input-group-append dropdown">
+                                        <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Weight</button>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                          <a class="dropdown-item" href="#">Kg</a>
+                                          <a class="dropdown-item" href="#">Lbs</a>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <label for="volumeInput">VOLUME</label>
+                                    <div class="input-group mb15">
+                                      <input type="text" class="form-control" id="volumeInput" />
+                                      <div class="input-group-append dropdown">
+                                        <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Volume</button>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                          <a class="dropdown-item" href="#">CBM</a>
+                                          <a class="dropdown-item" href="#">CFT</a>
+                                          <a class="dropdown-item" href="#">CIN</a>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <label for="packages">NUMBER OF PACKAGES</label>
+                                    <div class="input-group">
+                                      <input type="number" class="form-control" id="packages" value="1" />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="prl20 pb20">
+                                <div class="d-flex mb15">
+                                  <div class="form-check ml-auto">
+                                    <input type="checkbox" class="form-check-input" id="personalEffect">
+                                    <label class="form-check-label" for="personalEffect">
+                                      Personal Effect
+                                    </label>
+                                    <i class="fa fa-info-circle ml5" data-toggle="tooltip" data-placement="top" title="Select this option if you're quoting for an international move."></i>
+                                  </div>
+                                </div>
+                                <button type="button" class="btn btn-block cta">SUBMIT</button>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                   <div class="col">
-                    <input type="text" class="form-control inco-terms" placeholder="Inco Terms">
+                    <div class="popover-wrap">
+                      <input type="text" class="form-control trigger-input inco-terms" placeholder="Inco Terms" />
+                      <div class="popover-container">
+                        <div class="container">
+                          <div class="row">
+                            <div class="col">Hello</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                   <div class="col">
-                    <button type="submit" class="btn btn-block">Get Quote</button>
+                    <button type="submit" class="btn btn-block cta">Get Quote</button>
                   </div>
                 </div>
               </form>

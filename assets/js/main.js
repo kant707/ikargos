@@ -42,16 +42,21 @@ $(document).ready(function(){
     items: 1,
   })
 
-  $('.destination').on('focus', function () {
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  });
+
+
+  $('.trigger-input').on('focus', function () {
+    // $(this).parent().removeClass('show');
     $(this).parent().addClass('show');
 
-    $('body').on('mouseup', function(e)
-    {
-      let container = $(".destination-warp");
+    $('body').on('mouseup', function(e) {
+      let container = $('.popover-wrap');
+      // alert($(this))
 
       // if the target of the click isn't the container nor a descendant of the container
-      if (!container.is(e.target) && container.has(e.target).length === 0)
-      {
+      if (!container.is(e.target) && container.has(e.target).length === 0) {
         container.removeClass('show');
       }
     });
