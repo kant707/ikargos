@@ -266,7 +266,7 @@
                               </ul>
                             </div>
                             <div class="col">
-                              <iframe style="border-bottom-right-radius: 2px" width="316" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=316&amp;height=300&amp;hl=en&amp;q=%20Mumbai+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe> <a href='https://add-map.org/'>add google map to your website</a> <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=c87cb9cccfac511e8e6120977712ffab300adaa4'></script>
+                              <iframe width="316" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=316&height=300&hl=en&q=%20Mumbai+()&t=&z=12&ie=UTF8&iwloc=B&output=embed"></iframe>
                             </div>
                           </div>
                         </div>
@@ -431,92 +431,182 @@
   ================================================== -->
   <!-- Wrap the rest of the page in another container to center all the content. -->
 
-  <div class="container result-actions">
-    <div class="row">
-      <div class="col-5">
-        <div class="route-place d-flex">
-          <div class="mr15" style="flex: 1">
-            <div class="origin-place pt15">
+  <div class="container-fluid result-actions-main">
+    <div class="container result-actions">
+      <div class="row">
+        <div class="col-5">
+          <div class="route-place d-flex">
+            <div class="mr15" style="flex: 1">
+              <div class="origin-place pt15">
                 <span class="hook start mb10">
                   <i class="fa fa-anchor"></i>
                 </span>
-              <div class="origin-value ml35 prl10 pb10">
-                <span class="zipcode d-inline">40001</span>
-                <b> - </b>
-                <span class="place-name d-inline">Segovia <span class="country-name">(SPAIN)</span></span>
+                <div class="origin-value ml35 prl10 pb10">
+                  <span class="zipcode d-inline">40001</span>
+                  <b> - </b>
+                  <span class="place-name d-inline">Segovia <span class="country-name">(SPAIN)</span></span>
+                </div>
               </div>
-            </div>
-            <div class="destination-place pb15">
+              <div class="destination-place pb15">
                 <span class="hook end mt10">
                   <i class="fa fa-anchor"></i>
                 </span>
-              <div class="destination-value ml35 prl10 pt10">
-                <span class="zipcode d-inline">INBOM</span>
-                <b> - </b>
-                <span class="place-name d-inline">Port of MUMBAI (EX BOMBAY) <span class="country-name">(INDIA)</span></span>
+                <div class="destination-value ml35 prl10 pt10">
+                  <span class="zipcode d-inline">INBOM</span>
+                  <b> - </b>
+                  <span class="place-name d-inline">Port of MUMBAI (EX BOMBAY) <span class="country-name">(INDIA)</span></span>
+                </div>
               </div>
             </div>
+            <div class="d-flex align-items-center ml-auto">
+              <span class="x" data-toggle="modal" data-target="#myModal">
+                <i class="fa fa-edit"></i>
+                Edit
+                <div class="modal fade" id="myModal">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h4 class="modal-title">Edit Route</h4>
+                        <p>Edit the countries and locations of the route. For pickup and delivery you can also specify postal code.</p>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                        Modal body..
+                      </div>
+
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </span>
+            </div>
           </div>
-          <div class="d-flex align-items-center ml-auto">
+        </div>
+        <div class="col-4">
+          <div class="route-place cargo-place d-flex">
+            <div class="mr15" style="flex: 1">
+              <div class="origin-place pt15">
+                <div class="origin-value ml35 prl10 pb10">
+                  <div class="origin-value-icon"></div>
+                  <span class="zipcode fz11 d-inline">CARGO</span>
+                  <div class="place-name-lcl fz13">LCL</div>
+                </div>
+              </div>
+              <div class="destination-place pb15">
+                <div class="destination-value ml35 prl10 pt10">
+                  <span class="amount d-inline">1 box: 1 CFT 1000 KG</span>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex align-items-center ml-auto">
               <span class="x">
                 <i class="fa fa-edit"></i>
                 Edit
               </span>
-          </div>
-        </div>
-      </div>
-      <div class="col-4">
-        <div class="route-place d-flex">
-          <div class="mr15" style="flex: 1">
-            <div class="origin-place pt15">
-                <span class="hook start mb10">
-                  <i class="fa fa-anchor"></i>
-                </span>
-              <div class="origin-value ml35 prl10 pb10">
-                <span class="zipcode d-inline">40001</span>
-                <b> - </b>
-                <span class="place-name d-inline">Segovia <span class="country-name">(SPAIN)</span></span>
-              </div>
-            </div>
-            <div class="destination-place pb15">
-                <span class="hook end mt10">
-                  <i class="fa fa-anchor"></i>
-                </span>
-              <div class="destination-value ml35 prl10 pt10">
-                <span class="zipcode d-inline">INBOM</span>
-                <b> - </b>
-                <span class="place-name d-inline">Port of MUMBAI (EX BOMBAY) <span class="country-name">(INDIA)</span></span>
-              </div>
             </div>
           </div>
-          <div class="d-flex align-items-center ml-auto">
-              <span class="x">
-                <i class="fa fa-edit"></i>
-                Edit
-              </span>
-          </div>
+        </div>
+        <div class="col-3">
+          <div class="origin-place prl10 pt15 pb10 zipcode">Inco Terms</div>
+          <div class="destination-value prl10 pt10">Exworks</div>
         </div>
       </div>
-      <div class="col-3">asd</div>
     </div>
-    <div class="row">
-      <div class="col-3">
-        Included services
-        <div class="x">
-          <div class="media">
-            <img src="..." class="mr-3" alt="...">
-            <div class="media-body">
-              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+  </div>
+  <div class="container result-actions">
+    <div class="row row-panel">
+      <div class="col-4">
+        <h3 class="fz14">ADD ON SERVICES</h3>
+        <div class="addon-services">
+          <div class="addon-services-row mt10 p10">
+            <div class="addon-table-cell">
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input form-check-16" id="pickup">
+              </div>
             </div>
-          </div>
+            <div class="addon-table-cell addon-icon">
+              <i class="fa fa-truck fa-2x fz20"></i>
+            </div>
+            <label class="form-check-label addon-table-cell addon-desc" for="pickup">
+              <span class="pb5 d-block">PICK UP</span>
+              <span class="fz12 d-block">Cargo pick up from the postal code indicated.</span>
+            </label>
+          </div><!-- addon-services-row  -->
+          <div class="addon-services-row mt10 p10">
+            <div class="addon-table-cell">
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input form-check-16" id="portOfOrigin">
+              </div>
+            </div>
+            <div class="addon-table-cell addon-icon">
+              <i class="fa fa-anchor fa-2x fz20"></i>
+            </div>
+            <label class="form-check-label addon-table-cell addon-desc" for="portOfOrigin">
+              <span class="d-block pb5">PORT OF ORIGIN</span>
+              <span class="d-block fz12">Services associated with the port of origin: loading of container onto the ship, customs clearance, etc…</span>
+            </label>
+          </div><!-- addon-services-row  -->
+          <div class="addon-services-row mt10 p10">
+            <div class="addon-table-cell ">
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input form-check-16" id="oceanFreight" />
+              </div>
+            </div>
+            <div class="addon-table-cell addon-icon">
+              <i class="fa fa-ship fa-2x fz20"></i>
+            </div>
+            <label class="form-check-label addon-table-cell addon-desc" for="oceanFreight">
+              <span class="d-block pb5">OCEAN FREIGHT</span>
+              <span class="d-block fz12">Cargo transport from one port to another.</span>
+            </label>
+          </div><!-- addon-services-row  -->
+          <div class="addon-services-row mt10 p10">
+            <div class="addon-table-cell ">
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input form-check-16" id="portOfDischarge" />
+              </div>
+            </div>
+            <div class="addon-table-cell addon-icon">
+              <i class="fa fa-anchor fa-2x fz20"></i>
+            </div>
+            <label class="form-check-label addon-table-cell addon-desc" for="portOfDischarge">
+              <span class="d-block pb5">PORT OF DISCHARGE</span>
+              <span class="d-block fz12">Services associated with the port of discharge: unloading of the container, customs clearance, etc…</span>
+            </label>
+          </div><!-- addon-services-row  -->
+          <div class="addon-services-row mt10 p10">
+            <div class="addon-table-cell ">
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input form-check-16" id="delivery" />
+              </div>
+            </div>
+            <div class="addon-table-cell addon-icon">
+              <i class="fa fa-truck fa-2x fz20"></i>
+            </div>
+            <label class="form-check-label addon-table-cell addon-desc" for="delivery">
+              <span class="d-block pb5">DELIVERY</span>
+              <span class="d-block fz12">Cargo delivery to the postal code indicated.</span>
+            </label>
+          </div><!-- addon-services-row  -->
         </div>
       </div>
-      <div class="col-9">
+      <div class="col-8">
+        <div class="filter_row">
+
+        </div>
         info part
       </div>
     </div><!-- /.row -->
+  </div>
 
-
+  <div class="container">
     <!-- START THE FEATURETTES -->
     <hr class="featurette-divider">
 
@@ -559,6 +649,7 @@
     <!-- /END THE FEATURETTES -->
 
   </div><!-- /.container -->
+
 
 
   <!-- FOOTER -->
