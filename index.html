@@ -533,7 +533,7 @@
   <div class="container-fluid result-main-panel grey-bg">
     <div class="container result-actions pb20">
       <div class="row row-panel">
-        <div class="col-4 pt20">
+        <div class="col-4 addon-services-wrap pt20">
           <h3 class="fz14">ADD ON SERVICES</h3>
           <div class="addon-services pt10">
             <div class="addon-services-row mb10 p10">
@@ -653,7 +653,7 @@
             <button type="button" class="btn btn-primary btn-sm fz10 lh1 ml10">view</button>
           </div>
           <div class="x">
-            <div class="result-card bg-white">
+            <div class="result-card mb10 bg-white">
               <div class="d-flex">
                 <div class="shipping-info-wrap">
                   <span class="result-card-no">1.</span>
@@ -714,9 +714,15 @@
                   </div>
                 </div>
                 <div class="shipment-pricing-wrap ml-auto bg-white">
-                  <div class="shipment-pricing">
+                  <div class="shipment-pricing d-none">
                     <div class="pricing-wrap">
-                      <div class="price-value fw700 mb10 prl5 pt10">Price breakdown</div>
+                      <div class="d-flex pt5">
+                        <button class="hide-pricing link ml-auto" type="button">
+                          HIDE DETAILS
+                          <i class="fa fa-angle-up fz20" aria-hidden="true"></i>
+                        </button>
+                      </div>
+                      <div class="blue1 fw700 pb5 prl5 pt10 price-heading">Price breakdown</div>
                       <div class="accordion mb20" id="accordionExample">
                         <div class="">
                           <div class="d-flex heading-level-one">
@@ -724,7 +730,175 @@
                             <span class="ml-auto price-value">$1,397.70</span>
                             <i class="fa fa-angle-down fz20 ml10" data-toggle="collapse" data-parent="#accordionExample" data-target="#collapseOne" aria-expanded="true"></i>
                           </div>
-                          <div id="collapseOne" class="collapse price-sub-container show" aria-labelledby="headingOne">
+                          <div id="collapseOne" class="collapse price-sub-container" aria-labelledby="headingOne">
+                            <div class="d-flex price-sub-row">
+                              FREIGHT <span class="fz10 ml5">[ES]</span>
+                              <span class="ml-auto price-value">$826.70</span>
+                            </div>
+                            <div class="d-flex price-sub-row">
+                              BAF <span class="fz10 ml5">[ES]</span>
+                              <span class="ml-auto price-value">$249.70</span>
+                            </div>
+                            <div class="d-flex price-sub-row">
+                              EIS <span class="fz10 ml5">[ES]</span>
+                              <span class="ml-auto price-value">$22.70</span>
+                            </div>
+                            <div class="d-flex price-sub-row">
+                              CONGESTION / PSS / LSF <span class="fz10 ml5">[ES]</span>
+                              <span class="ml-auto price-value">$300.70</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="">
+                          <div class="d-flex heading-level-one">
+                            LOCAL CHARGES
+                            <span class="ml-auto price-value">$1,681.95</span>
+                            <i class="fa fa-angle-down fz20 ml10" data-toggle="collapse" data-parent="#accordionExample" data-target="#collapseTwo" aria-expanded="true"></i>
+                          </div>
+                          <div id="collapseTwo" class="collapse price-sub-container" aria-labelledby="headingOne">
+                            <div class="d-flex price-sub-row">
+                              THC LOCAL PORT <span class="fz10 ml5">[ES]</span>
+                              <span class="ml-auto price-value">$531.75</span>
+                            </div>
+                            <div class="d-flex price-sub-row">
+                              ISPS <span class="fz10 ml5">[ES]</span>
+                              <span class="ml-auto price-value">$23.12</span>
+                            </div>
+                            <div class="d-flex price-sub-row">
+                              PORT TAXES <span class="fz10 ml5">[ES]</span>
+                              <span class="ml-auto price-value">$104.04</span>
+                            </div>
+                            <div class="d-flex price-sub-row">
+                              B/L ISSUANCE <span class="fz10 ml5">[ES]</span>
+                              <span class="ml-auto price-value">$46.24</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="">
+                          <div class="d-flex heading-level-one">
+                            ADMINISTRATION FEE
+                            <span class="ml-auto price-value">$11.56</span>
+                            <i class="fa fa-angle-down fz20 ml10" data-toggle="collapse" data-parent="#accordionExample" data-target="#collapseThree" aria-expanded="true"></i>
+                          </div>
+                          <div id="collapseThree" class="collapse price-sub-container" aria-labelledby="headingOne">
+                            <div class="d-flex price-sub-row">
+                              COMMUNICATION FEE <span class="fz10 ml5">[ES]</span>
+                              <span class="ml-auto price-value">$11.56</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container text-right">
+                        <div class="row mb5">
+                          <div class="col">SUBTOTAL:</div>
+                          <div class="col pr5 price-value">$4,886.93</div>
+                        </div>
+                        <div class="row">
+                          <div class="col">VAT:</div>
+                          <div class="col pr5 price-value">$0.00</div>
+                        </div>
+                        <div class="row mt10 mb30 fz24 fw600">
+                          <div class="col">TOTAL:</div>
+                          <div class="col pr5 price-value">$4,886.93</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="short-pricing text-center ptb20 prl15">
+                    <div class="fz24 fw600 blue1 mb10">
+                      $4,886.93
+                    </div>
+                    <div class="">
+                      <button class="view-details link fz12 underline" type="button">VIEW DETAILS</button>
+                    </div>
+                  </div>
+                  <div class="mt-auto text-center mb20 prl15">
+                    <button class="btn btn-cta fz12" type="button">Add optional services</button>
+                  </div>
+                </div>
+              </div>
+              <div class="bottom-notification d-flex">
+                Transport by TECO (Tren Expreso) is included availability.
+                <!-- <a href="" class="link ml-auto">Click to see the booking details & price breakdown <i class="fa fa-angle-down" aria-hidden="true"></i></a> -->
+              </div>
+            </div>
+            <div class="result-card mb10 bg-white">
+              <div class="d-flex">
+                <div class="shipping-info-wrap">
+                  <span class="result-card-no">2.</span>
+                  <div class="shipping-info d-flex show">
+                    <div class="trail-info-wrap">
+                      <div class="trail-info">
+                        <div class="source-row">
+                          <i class="fa fa-anchor trail-icon" aria-hidden="true"></i>
+                          <div class="">
+                            <span class="zipcode">ESMAD</span>
+                            - <span class="text-truncate stop-name">Port of Madrid</span>
+                          </div>
+                          <span class="d-block country-name">
+                          spain
+                        </span>
+                        </div>
+                        <div class="between-row">
+                          <i aria-hidden="true" class="fa fa-angle-double-down fz20 trail-icon"></i>
+                          <div class="">
+                            DIRECT
+                          </div>
+                        </div>
+                        <div class="destination-row">
+                          <i class="fa fa-anchor trail-icon" aria-hidden="true"></i>
+                          <div class="">
+                            <span class="zipcode">INNSA</span>
+                            - <span class="text-truncate stop-name">Port of Jawaharlal Nehru (Nhava Sheva)</span>
+                          </div>
+                          <span class="d-block country-name">
+                          india
+                        </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="transit-info">
+                      <div class="d-flex">
+                        <div class="media transit-ship">
+                          <i class="fa fa-ship fz22 mr5" aria-hidden="true"></i>
+                          <div class="media-body">
+                            <div class="name-info">ett</div>
+                            <span class="other-info">7 Days</span>
+                          </div>
+                        </div>
+                        <div class="media">
+                          <i class="fa fa-calendar fz22 mr5" aria-hidden="true"></i>
+                          <div class="media-body">
+                            <div class="name-info">next departure</div>
+                            <span class="other-info">21-Aug-2020</span>
+                            <span class="fz10">
+                            <i class="fa fa-refresh pl5" aria-hidden="true"></i>
+                            <i>every 28 days</i>
+                          </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="shipment-pricing-wrap ml-auto bg-white">
+                  <div class="shipment-pricing d-none">
+                    <div class="pricing-wrap">
+                      <div class="d-flex pt5">
+                        <button class="hide-pricing link ml-auto" type="button">
+                          HIDE DETAILS
+                          <i class="fa fa-angle-up fz20" aria-hidden="true"></i>
+                        </button>
+                      </div>
+                      <div class="blue1 fw700 pb5 prl5 pt10 price-heading">Price breakdown</div>
+                      <div class="accordion mb20" id="accordionExample">
+                        <div class="">
+                          <div class="d-flex heading-level-one">
+                            FREIGHT AND SURCHARGES
+                            <span class="ml-auto price-value">$1,397.70</span>
+                            <i class="fa fa-angle-down fz20 ml10" data-toggle="collapse" data-parent="#accordionExample" data-target="#collapseOne" aria-expanded="true"></i>
+                          </div>
+                          <div id="collapseOne" class="collapse price-sub-container" aria-labelledby="headingOne">
                             <div class="d-flex price-sub-row">
                               FREIGHT <span class="fz10 ml5">[ES]</span>
                               <span class="ml-auto price-value">$826.70</span>
@@ -796,16 +970,23 @@
                           <div class="col pr5 price-value">$3,553.61</div>
                         </div>
                       </div>
-                      <div class="mt-auto text-center mb20">
-                        <button class="btn btn-cta fz12" type="button">Add optional services</button>
-                      </div>
                     </div>
+                  </div>
+                  <div class="short-pricing text-center ptb20 prl15">
+                    <div class="price-value fz24 fw600 blue1">
+                      $3,553.61
+                    </div>
+                    <div class="">
+                      <button class="view-details link fz12 underline" type="button">VIEW DETAILS</button>
+                    </div>
+                  </div>
+                  <div class="mt-auto text-center mb20 prl15">
+                    <button class="btn btn-cta fz12" type="button">Add optional services</button>
                   </div>
                 </div>
               </div>
               <div class="bottom-notification d-flex">
                 Transport by TECO (Tren Expreso) is included availability.
-                <a href="" class="link ml-auto">Click to see the booking details & price breakdown <i class="fa fa-angle-down" aria-hidden="true"></i></a>
               </div>
             </div>
           </div>

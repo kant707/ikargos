@@ -60,8 +60,17 @@ $(document).ready(function(){
         container.removeClass('show');
       }
     });
+  });
 
-
+  $('.view-details').on('click', function () {
+    let self = $(this).closest('.result-card');
+    self.find('.shipment-pricing').removeClass('d-none');
+    self.find('.short-pricing').addClass('d-none');
+  });
+  $('.hide-pricing').on('click', function () {
+    let self = $(this).closest('.result-card');
+    self.find('.shipment-pricing').addClass('d-none');
+    self.find('.short-pricing').removeClass('d-none');
   });
 
 });

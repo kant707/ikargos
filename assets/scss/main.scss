@@ -385,10 +385,13 @@ input[type=number].num::-webkit-outer-spin-button {
       color: #545454;
       font-weight: bold;
     }
+    .addon-services-wrap {
+      border-right: 1px solid #eaeaea;
+    }
     .addon-services {
       background-color: #fff;
       display: table;
-      width: 322px;
+      //width: 322px;
       border: 1px solid #cfcfcf;
       border-radius: 3px;
     }
@@ -481,8 +484,8 @@ input[type=number].num::-webkit-outer-spin-button {
 
     .result-card-no {
       position: absolute;
-      top: 5px;
-      left: 10px;
+      top: 3px;
+      left: 6px;
       z-index: 2;
       font-size: 10px;
     }
@@ -507,7 +510,7 @@ input[type=number].num::-webkit-outer-spin-button {
           align-items: center;
           >div {
             width: 50%;
-            padding: 18px 12px;
+            padding: 12px 12px;
 
             &.transit-ship {
               //padding-left: 20px;
@@ -537,6 +540,7 @@ input[type=number].num::-webkit-outer-spin-button {
       .source-row,
       .between-row,
       .destination-row {
+        margin-bottom: 5px;
         padding-left: 25px;
         position: relative;
 
@@ -549,7 +553,7 @@ input[type=number].num::-webkit-outer-spin-button {
           font-weight: 700;
         }
         .stop-name {
-          width: 200px;
+          width: 280px;
           vertical-align: text-bottom;
         }
         .country-name {
@@ -565,8 +569,8 @@ input[type=number].num::-webkit-outer-spin-button {
       }
       .source-row {}
       .between-row {
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 15px;
+        margin-bottom: 15px;
       }
       .destination-row {}
     }
@@ -591,10 +595,16 @@ input[type=number].num::-webkit-outer-spin-button {
   }
   .shipment-pricing-wrap {
     border-left: 1px solid #eaeaea;
+    display: flex;
+    flex-direction: column;
+
     .shipment-pricing {}
     .pricing-wrap {
       width: 320px;
 
+      .price-heading {
+        border-bottom: 1px solid #eaeaea;
+      }
       .heading-level-one {
         font-size: 12px;
         font-weight: 700;

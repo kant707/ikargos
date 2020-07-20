@@ -120,8 +120,20 @@ svg {
   color: inherit;
   text-decoration: none;
   cursor: pointer;
+  background: none;
+  border: none;
   &:hover {
     color: inherit;
     text-decoration: none;
   }
+  &:focus {
+    outline: none;
+  }
+}
+.blue1 {
+  color: #146fb7;
+}
+.underline {
+  cursor: pointer;
+  text-decoration: underline;
 }
