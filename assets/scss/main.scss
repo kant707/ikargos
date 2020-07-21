@@ -19,11 +19,15 @@ input[type=number].num::-webkit-outer-spin-button {
 .form-check-input {
   margin-top: .2rem;
 }
+.dropdown {
+
+}
 .dropdown-menu {
   top: 115%;
   margin-top: -5px;
   max-height: 200px;
   overflow-y: auto;
+  font-size: inherit;
 
   &.show {
     animation:dropdown-display .4s cubic-bezier(.73,.005,.22,1)
@@ -38,9 +42,13 @@ input[type=number].num::-webkit-outer-spin-button {
       transform:scale(1) translateY(0)
     }
   }
+  .dropdown-item {
+    font-size: inherit;
+  }
 }
 
 .dropdown-toggle {
+  font-size: inherit;
   &:after {
     content: "\f107";
     display: inline-block;
@@ -387,11 +395,17 @@ input[type=number].num::-webkit-outer-spin-button {
     }
     .addon-services-wrap {
       border-right: 1px solid #eaeaea;
+
+      @media (max-width: 991px) {
+        border-right: none;
+        border-bottom: 1px solid #eaeaea;
+      }
     }
     .addon-services {
       background-color: #fff;
       display: table;
       //width: 322px;
+      width: 100%;
       border: 1px solid #cfcfcf;
       border-radius: 3px;
     }
@@ -406,6 +420,29 @@ input[type=number].num::-webkit-outer-spin-button {
         font-size: 12px;
         margin-left: 1px;
         line-height: 19px;
+      }
+    }
+    .share-quote {
+    }
+
+    .filter-row {
+      @media (max-width: 767px) {
+        flex-wrap: wrap;
+
+        .custom-control-label {
+          font-size: 12px;
+        }
+        .custom-switch {
+          padding: 7px 0px 7px 35px;
+          border-color: transparent;
+        }
+        .dropdown {
+          font-size: 12px;
+
+          .dropdown-toggle {
+            padding: 5px 5px;
+          }
+        }
       }
     }
 
@@ -472,7 +509,9 @@ input[type=number].num::-webkit-outer-spin-button {
 }
 
 .result-main-panel {
-
+  @media (max-width: 991px) {
+    padding: 0;
+  }
 }
 .result-card {
   color: #777;
@@ -597,10 +636,23 @@ input[type=number].num::-webkit-outer-spin-button {
     border-left: 1px solid #eaeaea;
     display: flex;
     flex-direction: column;
+    @media (max-width: 767px) {
+      .short-pricing {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      .mt-auto {
+        margin-bottom: 15px;
+      }
+    }
+
 
     .shipment-pricing {}
     .pricing-wrap {
       width: 320px;
+      @media (max-width: 767px) {
+        width: 100%;
+      }
 
       .price-heading {
         border-bottom: 1px solid #eaeaea;
