@@ -209,7 +209,7 @@ input[type=number].num::-webkit-outer-spin-button {
   }
 
   .form-wrap {
-    padding: 25px;
+    padding: 25px 25px 10px;
     border-radius: 4px;
     background: rgba(256,256,256, .8);
 
@@ -334,6 +334,40 @@ input[type=number].num::-webkit-outer-spin-button {
 
     }
   }
+
+
+  @media (max-width: 767px) {
+    .heading-content {
+      margin-top: 110px;
+      margin-bottom: 50px;
+
+      h3 {
+        font-size: rem(30px);
+      }
+      p {
+        font-size: rem(22px);
+      }
+    }
+    .form-wrap {
+      padding: 15px 15px 5px;
+      .fz15 {
+        font-size: 14px;
+      }
+      .d-md-flex {
+        .mr15 {
+          margin-right: 0;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+  @media (max-width: 400px) {
+    .form-wrap {
+      .fz15 {
+        font-size: 13px;
+      }
+    }
+  }
 }
 .main-carousel {
   z-index: initial;
@@ -404,6 +438,12 @@ input[type=number].num::-webkit-outer-spin-button {
       height: 12px;
       border-radius: 50%;
       background: #ccc;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .item {
+      height: 770px;
     }
   }
 }
