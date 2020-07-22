@@ -1,3 +1,4 @@
+@import "rem";
 // Bootstrap overrides
 .custom-control-label::before {
   top: .15rem;
@@ -14,55 +15,55 @@ svg {
 }
 
 .fz8 {
-  font-size: 8px;
+  font-size: rem(8px);
 }
 .fz9 {
-  font-size: 9px;
+  font-size: rem(9px);
 }
 .fz10 {
-  font-size: 10px;
+  font-size: rem(10px);
 }
 .fz11 {
-  font-size: 11px;
+  font-size: rem(11px);
 }
 .fz12 {
-  font-size: 12px;
+  font-size: rem(12px);
 }
 .fz13 {
-  font-size: 13px;
+  font-size: rem(13px);
 }
 .fz14 {
-  font-size: 14px;
+  font-size: rem(14px);
 }
 .fz15 {
-  font-size: 15px;
+  font-size: rem(15px);
 }
 .fz16 {
-  font-size: 16px;
+  font-size: rem(16px);
 }
 .fz18 {
-  font-size: 18px;
+  font-size: rem(18px);
 }
 .fz20 {
-  font-size: 20px;
+  font-size: rem(20px);
 }
 .fz22 {
-  font-size: 22px;
+  font-size: rem(22px);
 }
 .fz24 {
-  font-size: 24px;
+  font-size: rem(24px);
 }
 .fz26 {
-  font-size: 26px;
+  font-size: rem(26px);
 }
 .fz28 {
-  font-size: 28px;
+  font-size: rem(28px);
 }
 .fz30 {
-  font-size: 30px;
+  font-size: rem(30px);
 }
 .fz32 {
-  font-size: 32px;
+  font-size: rem(32px);
 }
 .fw100 {
   font-weight: 100;
