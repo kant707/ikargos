@@ -52,7 +52,22 @@ $(document).ready(function(){
     $(this).parent().addClass('show');
 
     $('body').on('mouseup', function(e) {
-      let container = $('.popover-wrap');
+      let container = $('.destination-warp');
+      // alert($(this))
+
+      // if the target of the click isn't the container nor a descendant of the container
+      if (!container.is(e.target) && container.has(e.target).length === 0) {
+        container.removeClass('show');
+      }
+    });
+  });
+
+  $('.load-type').on('focus', function () {
+    // $(this).parent().removeClass('show');
+    $(this).parent().addClass('show');
+
+    $('body').on('mouseup', function(e) {
+      let container = $('.load-type-wrap');
       // alert($(this))
 
       // if the target of the click isn't the container nor a descendant of the container
@@ -72,5 +87,16 @@ $(document).ready(function(){
     self.find('.shipment-pricing').addClass('d-none');
     self.find('.short-pricing').removeClass('d-none');
   });
+
+  // Reusable goToByScroll function(id) call it when needed with ID param.
+  function goToByScroll(id) {
+    $('html,body').animate({scrollTop:$("#"+id).offset().top}, 'slow');
+  }
+
+  $('#getQuoteCta').on('click', function() {
+    goToByScroll('resultActionsMain');
+  });
+
+
 
 });
