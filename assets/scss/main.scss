@@ -44,7 +44,7 @@ input[type=number].num::-webkit-outer-spin-button {
     }
   }
   .dropdown-item {
-    font-size: inherit;
+    font: inherit;
   }
 }
 
@@ -132,8 +132,13 @@ input[type=number].num::-webkit-outer-spin-button {
   left: 0;
   @media (max-width: 767px) {
     background: #fff;
-    .navbar-nav .nav-item .nav-link.nav-link {
-      color: #606060;
+    .navbar-nav {
+      .nav-item {
+        .dropdown-item.dropdown-item,
+        .nav-link.nav-link {
+          color: #606060;
+        }
+      }
     }
     .btn {
       padding: .25rem .5rem;
@@ -147,16 +152,25 @@ input[type=number].num::-webkit-outer-spin-button {
   @media (min-width: 768px) and (max-width: 991px){
     .navbar-nav {
       font-size: rem(12px);
-      .nav-link {
-        //padding: 5px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+
+      .nav-link {}
+      .btn {
+        font-size: inherit;
       }
+    }
+  }
+  @media (min-width: 991px) and (max-width: 1080px){
+    .navbar-nav {
+      font-size: rem(12px);
+      .nav-link {}
       .btn {
         font-size: inherit;
       }
     }
   }
   .navbar-toggler {
-    //background: #dbd9d9;
     padding-right: 0;
     padding-left: 0;
   }
@@ -167,6 +181,7 @@ input[type=number].num::-webkit-outer-spin-button {
       &.login {
         margin-right: 10px;
       }
+      .dropdown-item,
       .nav-link {
         color: #fff;
         transition: all ease-in-out 300ms;
@@ -174,6 +189,9 @@ input[type=number].num::-webkit-outer-spin-button {
         &:hover {
           color: #ec6729;
         }
+      }
+      .dropdown-item {
+        color: #333;
       }
     }
   }
