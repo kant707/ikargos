@@ -12,6 +12,7 @@
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/jquery-ui.css" />
   <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
   <link rel="stylesheet" href="assets/css/animate.min.css" />
   <link rel="stylesheet" href="assets/css/main.css" />
@@ -456,7 +457,7 @@
   <div class="container-fluid result-actions-main" id="resultActionsMain">
     <div class="container result-actions">
       <div class="row">
-        <div class="col-5">
+        <div class="col-md-5">
           <div class="route-place d-flex">
             <div class="mr15" style="flex: 1">
               <div class="origin-place pt15">
@@ -481,37 +482,56 @@
               </div>
             </div>
             <div class="d-flex align-items-center ml-auto">
-              <span class="x" data-toggle="modal" data-target="#myModal">
-                <i class="fa fa-edit"></i>
+              <button type="button" class="link" data-toggle="modal" data-target="#editSourceDestinationModal">
+                <i class="fa fa-edit text-muted"></i>
                 Edit
-                <div class="modal fade" id="myModal">
-                  <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                      <!-- Modal Header -->
-                      <div class="modal-header">
-                        <h4 class="modal-title">Edit Route</h4>
-                        <p>Edit the countries and locations of the route. For pickup and delivery you can also specify postal code.</p>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                      </div>
+              </button>
+              <div class="modal fade" id="editSourceDestinationModal">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">EDIT ROUTE</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="fz12 mb10">Edit the countries and locations of the route. For <strong>pickup</strong> and <strong>delivery</strong> you can also specify postal code.</div>
+                      <form>
+                        <div class="form-group">
+                          <label for="editSource" class="text-muted">Source</label>
+                          <div class="">
+                            <input type="text" class="form-control" id="editSource">
+                          </div>
+                          <small class="form-text">
+                            <i class="fa fa-map-marker fz16 mr5"></i>
+                            40001 (40001) - SPAIN
+                          </small>
+                        </div>
 
-                      <!-- Modal body -->
-                      <div class="modal-body">
-                        Modal body..
-                      </div>
-
-                      <!-- Modal footer -->
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      </div>
-
+                        <div class="form-group">
+                          <label for="editDestination" class="text-muted">Destination</label>
+                          <div class="">
+                            <input type="text" class="form-control" id="editDestination">
+                          </div>
+                          <small class="form-text">
+                            <i class="fa fa-anchor fz16 mr5"></i>
+                            PORT OF MUMBAI (EX BOMBAY)
+                          </small>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="link" data-dismiss="modal">CLOSE</button>
+                      <button type="button" class="btn btn-primary" style="width: 100px;">OK</button>
                     </div>
                   </div>
                 </div>
-              </span>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-4">
+        <div class="col-md-4">
           <div class="route-place cargo-place d-flex">
             <div class="mr15" style="flex: 1">
               <div class="origin-place pt15">
@@ -528,27 +548,176 @@
               </div>
             </div>
             <div class="d-flex align-items-center ml-auto">
-              <span class="x">
-                <i class="fa fa-edit"></i>
+              <button type="button" class="link" data-toggle="modal" data-target="#editCargoModal">
+                <i class="fa fa-edit text-muted"></i>
                 Edit
-              </span>
+              </button>
+              <div class="modal fade" id="editCargoModal">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">EDIT CARGO</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body p-0">
+                      <div class="popover-wrap load-type-wrap">
+                        <div class="load-type-popover d-block">
+                          <div class="container">
+                            <div class="row">
+                              <div class="col p-0">
+                                <ul class="nav nav-pills mb-0 text-center text-uppercase fw600 fz18" id="edit-pills-tab" role="tablist">
+                                  <li class="nav-item w-50" role="presentation">
+                                    <a class="nav-link rounded-0 active" id="edit-pills-fcl-tab" data-toggle="pill" href="#edit-pills-fcl" role="tab" aria-controls="pills-home" aria-selected="true">
+                                      fcl
+                                      <span class="d-block fz14">full container</span>
+                                    </a>
+                                  </li>
+                                  <li class="nav-item w-50" role="presentation">
+                                    <a class="nav-link rounded-0" id="edit-pills-lcl-tab" data-toggle="pill" href="#edit-pills-lcl" role="tab" aria-controls="pills-profile" aria-selected="false">
+                                      lcl
+                                      <span class="d-block fz14">shared container</span>
+                                    </a>
+                                  </li>
+                                </ul>
+                                <div class="tab-content" id="edit-pills-tabContent">
+                                  <div class="tab-pane fade show active p20" id="edit-pills-fcl" role="tabpanel" aria-labelledby="pills-home-tab">
+                                    <div class="container-row d-flex ptb10">
+                                      <div class="action-input d-flex">
+                                        <input type="number" class="form-control num mr20" min="1" placeholder="" autofocus />
+                                      </div>
+                                      <div class="action-for mr15">
+                                        <div class="container-length">20FT CONTAINER</div>
+                                        <div class="container-dimensions">20' x 8' x 8'6"</div>
+                                      </div>
+                                      <div class="container-img ml-auto">
+                                        <img src="assets/images/size-1.webp" alt="" />
+                                      </div>
+                                    </div>
+                                    <div class="container-row d-flex ptb10">
+                                      <div class="action-input d-flex">
+                                        <input type="number" class="form-control num mr20" min="1" />
+                                      </div>
+                                      <div class="action-for mr15">
+                                        <div class="container-length">20FT CONTAINER</div>
+                                        <div class="container-dimensions">20' x 8' x 8'6"</div>
+                                      </div>
+                                      <div class="container-img ml-auto">
+                                        <img src="assets/images/size-2.webp" alt="" />
+                                      </div>
+                                    </div>
+                                    <div class="container-row d-flex ptb10">
+                                      <div class="action-input d-flex">
+                                        <input type="number" class="form-control num mr20" min="1" />
+                                      </div>
+                                      <div class="action-for mr15">
+                                        <div class="container-length">20FT CONTAINER</div>
+                                        <div class="container-dimensions">20' x 8' x 8'6"</div>
+                                      </div>
+                                      <div class="container-img ml-auto">
+                                        <img src="assets/images/size-3.webp" alt="" />
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="tab-pane fade" id="edit-pills-lcl" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                    <div class="p20">
+                                      <label for="editWeightInput">WEIGHT</label>
+                                      <div class="input-group mb15">
+                                        <input type="text" class="form-control" id="editWeightInput" />
+                                        <div class="input-group-append dropdown">
+                                          <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Weight</button>
+                                          <div class="dropdown-menu dropdown-menu-right">
+                                            <a class="dropdown-item" href="#">Kg</a>
+                                            <a class="dropdown-item" href="#">Lbs</a>
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                      <label for="editVolumeInput">VOLUME</label>
+                                      <div class="input-group mb15">
+                                        <input type="text" class="form-control" id="editVolumeInput" />
+                                        <div class="input-group-append dropdown">
+                                          <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Volume</button>
+                                          <div class="dropdown-menu dropdown-menu-right">
+                                            <a class="dropdown-item" href="#">CBM</a>
+                                            <a class="dropdown-item" href="#">CFT</a>
+                                            <a class="dropdown-item" href="#">CIN</a>
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                      <label for="packages">NUMBER OF PACKAGES</label>
+                                      <div class="input-group">
+                                        <input type="number" class="form-control num" id="packages" value="1" min="1" />
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="prl20">
+                                  <div class="d-flex mb15">
+                                    <div class="form-check ml-auto">
+                                      <input type="checkbox" class="form-check-input" id="editPersonalEffect">
+                                      <label class="form-check-label" for="editPersonalEffect">
+                                        Personal Effect
+                                      </label>
+                                      <i class="fa fa-info-circle ml5" data-toggle="tooltip" data-placement="top" title="Select this option if you're quoting for an international move."></i>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="link" data-dismiss="modal">CLOSE</button>
+                      <button type="button" class="btn btn-primary" style="width: 100px;">OK</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-3">
+        <div class="col-md-3">
           <div class="d-flex">
             <div class="">
               <div class="origin-place prl10 pt15 pb10 zipcode">Inco Terms</div>
               <div class="destination-value prl10 pt10">Exworks</div>
             </div>
-            <span class="d-flex align-items-center ml20">
-                <i class="fa fa-edit mr5"></i>
-                Edit
-            </span>
+            <button type="button" class="d-flex align-items-center ml20 link" data-toggle="modal" data-target="#editIncoTermModal">
+              <i class="fa fa-edit text-muted mr5"></i>
+              Edit
+            </button>
+            <div class="modal fade" id="editIncoTermModal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">EDIT INCO-TERMS</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <select class="form-control inco-terms">
+                      <option selected>Inco terms</option>
+                      <option>Exworks</option>
+                      <option>FOB</option>
+                      <option>C&F or CFR</option>
+                      <option>DDU</option>
+                      <option>DDP</option>
+                    </select>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="link" data-dismiss="modal">CLOSE</button>
+                    <button type="button" class="btn btn-primary" style="width: 100px;">OK</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-
-
-
         </div>
       </div>
     </div>
@@ -684,8 +853,36 @@
           </div>
           <div class="alert alert-warning fz12 mb15" role="alert">
             Overweight Surcharges + 18 ton
-            <button type="button" class="btn btn-primary btn-sm fz10 lh1 ml10">view</button>
+            <button type="button" class="btn btn-primary btn-sm fz10 lh1 ml10" data-toggle="modal" data-target="#surchargeInfoModal">view</button>
           </div>
+          <div class="modal fade" id="surchargeInfoModal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Overweight Surcharges + 18 ton</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  Dear customer,
+                  <br>
+                  <br>
+                  This message is to kindly inform you that carriers have announced overweight surcharges above the 18 tons (for both 20' and 40'/HC), applicable to specific routes and trade lanes.
+                  <br>
+                  <br>
+                  NOTE: This surcharge, if applicable, is not included in our current quotes. The exact cost and range of weight it applies to depends on a combination of factors, which is why we highly recommend reporting your estimated weight to our sales representative to define the best strategy and rate for your shipment.
+                  <br>
+                  <br>
+                  For more information, please contact one of our sales representatives at (+34) 93 2204 856.
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" style="width: 100px;" data-dismiss="modal">CLOSE</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div class="x">
             <div class="result-card mb10 bg-white">
               <div class="d-md-flex result-col">
@@ -1042,6 +1239,7 @@
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS or Bootstrap.bundle JS -->
 <script src="assets/js/jquery-3.5.1.min.js"></script>
+<script src="assets/js/jquery-ui.min.js"></script>
 <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/owl.carousel.min.js"></script>
 <script src="assets/js/main.js"></script>

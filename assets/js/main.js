@@ -98,5 +98,23 @@ $(document).ready(function(){
   });
 
 
+  let sourceList = [
+    "Spain",
+    "Sweden",
+    "Solovakia",
+    "Switzerland",
+  ];
+  let destinationList = [
+    "Mumbai",
+    "Madras",
+    "Mewar",
+  ];
+
+  $("#editSource").autocomplete({
+    source: sourceList,
+  });
+  $("#editDestination").autocomplete({
+    source: destinationList,
+  });
 
 });
