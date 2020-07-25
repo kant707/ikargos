@@ -656,25 +656,34 @@ input[type=number].num::-webkit-outer-spin-button {
       }
     }
   }
-  .origin-place {
+
+  .origin-place,
+  .destination-place {
+    padding-left: 35px;
+    position: relative;
+
+    .hook {
+      background: #146fb7;
+      width: 22px;
+      height: 22px;
+      color: #fff;
+      border-radius: 50%;
+      text-align: center;
+      vertical-align: middle;
+      position: absolute;
+      left: 0;
+      &.start {}
+      &.end {
+        bottom: 16px;
+      }
+
+    }
+  }
+  .l1,
+  .l2 {
     position: relative;
   }
 
-  .hook {
-    background: #146fb7;
-    width: 22px;
-    height: 22px;
-    color: #fff;
-    border-radius: 50%;
-    text-align: center;
-    vertical-align: middle;
-    position: absolute;
-    &.start {}
-    &.end {
-      bottom: 35px;
-    }
-
-  }
   .destination-value {
     border-top: 1px solid #ccc;
   }
