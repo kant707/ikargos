@@ -455,6 +455,9 @@ input[type=number].num::-webkit-outer-spin-button {
     position: absolute;
     top: 50%;
     width: 100%;
+    @media (max-width: 767px) {
+      display: none;
+    }
 
     .owl-prev,
     .owl-next {
