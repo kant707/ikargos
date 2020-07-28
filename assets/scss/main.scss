@@ -606,58 +606,6 @@ input[type=number].num::-webkit-outer-spin-button {
       content: '';
       border-left: 0;
     }
-    .load-type-wrap {
-      .load-type-popover {
-        min-height: 300px;
-
-        .nav-link {
-          background: #f6f6f6;
-          color: #777;
-
-          &.active {
-            background: #fff;
-            color: #ec6729;
-            span {
-              color: #777;
-            }
-          }
-        }
-
-        #edit-pills-fcl,
-        #edit-pills-lcl {
-          .form-control {
-            padding-left: 10px;
-          }
-        }
-        #edit-pills-fcl {
-          .form-control {
-            width: 80px;
-          }
-          .container-length {
-            color: #8b8b8b;
-            font-weight: 600;
-          }
-          .container-dimensions {
-            color: #8b8b8b;
-          }
-        }
-        #edit-pills-lcl {
-          .dropdown-toggle {
-            border: 1px solid #ccc;
-          }
-        }
-
-        @media (max-width: 767px) {
-          width: 100%;
-          #edit-pills-fcl {
-            padding: 10px;
-            img {
-              max-width: 100%;
-            }
-          }
-        }
-      }
-    }
   }
 
   .origin-place,

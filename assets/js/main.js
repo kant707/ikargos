@@ -77,6 +77,28 @@ $(document).ready(function(){
     });
   });
 
+  // edit source
+  $('#editOrigin').on('click', function () {
+    goToByScroll('formWrap');
+    $('#originInput').focus();
+  });
+  // edit destination
+  $('#editDestination').on('click', function () {
+    goToByScroll('formWrap');
+    $('#destinationInput').focus();
+  });
+  // edit loadType
+  $('#editLoadType').on('click', function () {
+    goToByScroll('formWrap');
+    $('#loadTypeInput').focus();
+  });
+  // edit incoTerm
+  $('#editIncoTerm').on('click', function () {
+    goToByScroll('formWrap');
+    $('#incoTermInput').focus();
+  });
+
+
   $('.view-details').on('click', function () {
     let self = $(this).closest('.result-card');
     self.find('.shipment-pricing').removeClass('d-none');
