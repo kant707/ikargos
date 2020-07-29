@@ -1,0 +1,74 @@
+// header
+.dark-header {
+  background: $primary-dark;
+  color: $white;
+
+  .navbar {
+    position: static;
+  }
+}
+
+// progress steps
+.progress-steps {
+  .steps-list {
+    .list-inline-item {
+      color: #cfcfcf;
+      padding: 18px 15px 18px 5px;
+      width: 24%;
+      position: relative;
+      &:after {
+        content: '\f105';
+        color: $primary-dark;
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-size: 30px;
+        font-weight: bold;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      &:last-child {
+        &:after {
+          content: '';
+        }
+      }
+      &.has-done {
+        color: $primary-dark;
+        font-weight: 700;
+      }
+    }
+  }
+  .progress-bar-wrap {
+    height: 5px;
+    background: #e5e5e5;
+    margin-right: -15px;
+    margin-left: -15px;
+    .progress-bar {
+      height: inherit;
+      background: $primary-orange;
+    }
+  }
+}
+
+// optional content
+.optional-content {
+  .optional-content-col-1 {}
+  .optional-content-col-2 {}
+}
+
+// .optional-content-col-1
+.optional-content-col-1 {
+
+}
+
+// .optional-content-col-2
+.optional-content-col-2 {
+  .quote-summery-box {
+    background: $main-bg;
+    padding: 30px;
+  }
+}

@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet">
+  <!--  https://flagicons.lipis.dev  -->
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/jquery-ui.css" />
+  <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="assets/css/animate.min.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <title>Optional services | IKargos</title>
+</head>
+<body>
+  <header class="container-fluid dark-header">
+    <div class="container">
+      <div class="col">
+      <div class="row">
+        <nav class="navbar navbar-expand-md w-100">
+          <a class="navbar-brand" href="#">
+            <img src="assets/images/logo.png" class="brand-logo" alt="">
+          </a>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="ml-auto">
+              <ul class="navbar-nav fz14">
+                <li class="nav-item login">
+                  <a class="nav-link" href="#">LOGOUT</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    </div>
+  </header>
+  <div class="container-fluid progress-steps mb40">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <ul class="steps-list list-unstyled list-inline mb-0">
+            <li class="list-inline-item has-done">1. CHOOSE A QUOTE</li>
+            <li class="list-inline-item has-done">2. OPTIONAL SERVICES</li>
+            <li class="list-inline-item">3. SHIPMENT INFORMATION</li>
+            <li class="list-inline-item">4. BILLING INFORMATION / PAYMENT</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="progress-bar-wrap">
+      <div class="progress-bar" style="width: 33%"></div>
+    </div>
+  </div>
+  <div class="container optional-content">
+    <div class="row">
+      <div class="col-md-7 optional-content-col-1">
+        <h2 class="fz30">OPTIONAL SERVICES</h2>
+        <p class="mb20">Select the optional services for this booking</p>
+        <h3 class="x">Cargo Insurance</h3>
+        <p class="x">I want to insure my goods</p>
+        <div class="mb10">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="insure-goods" id="insureGoodYes">
+            <label class="form-check-label" for="insureGoodYes">Yes</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="insure-goods" id="insureGoodNo">
+            <label class="form-check-label" for="insureGoodNo">No</label>
+          </div>
+        </div>
+        <div class="form-inline mb25">
+          <input type="number" class="form-control" id="insureValue" min="0">
+          <label for="insureValue" class="col-form-label ml15">USD</label>
+        </div>
+        <h3 class="mb15">Additional Services</h3>
+        <div class="accordion mb25" id="accordionExample">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h4 class="mb-0 d-flex fz15">
+                United States
+                <button class="link ml-auto" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <i class="fa fa-plus-circle"></i>
+                </button>
+              </h4>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body">
+                <div class="form-check mb10">
+                  <input class="form-check-input" type="checkbox" id="blCourierNational">
+                  <label class="form-check-label" for="blCourierNational">B/L Courier (National)</label>
+                </div>
+                <div class="form-check mb10">
+                  <input class="form-check-input" type="checkbox" id="packingListCompletion">
+                  <label class="form-check-label" for="packingListCompletion">Packing list completion</label>
+                </div>
+                <div class="form-check mb10">
+                  <input class="form-check-input" type="checkbox" id="blCourierInternational">
+                  <label class="form-check-label" for="blCourierInternational">B/L Courier (International)</label>
+                </div>
+                <div class="form-check mb10">
+                  <input class="form-check-input" type="checkbox" id="validationOfTitles">
+                  <label class="form-check-label" for="validationOfTitles">Validation of titles</label>
+                </div>
+                <div class="form-check mb10">
+                  <input class="form-check-input" type="checkbox" id="exportCertificateDocs">
+                  <label class="form-check-label" for="exportCertificateDocs">Export certificate docs</label>
+                </div>
+                <div class="form-check mb10">
+                  <input class="form-check-input" type="checkbox" id="certificateOfOrigin">
+                  <label class="form-check-label" for="certificateOfOrigin">Certificate of origin</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="x">Custom clearance</h3>
+        <div class="mb25">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="custom-clearance" id="customClearanceYes">
+            <label class="form-check-label" for="customClearanceYes">Yes</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="custom-clearance" id="customClearanceNo">
+            <label class="form-check-label" for="customClearanceNo">No</label>
+          </div>
+        </div>
+
+        <h3 class="x">Warehouse</h3>
+        <p class="x">We offer you the option to use our warehouse for storing your goods.</p>
+        <div class="mb25">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="warehouse" id="warehouseYes">
+            <label class="form-check-label" for="warehouseYes">Yes</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="warehouse" id="warehouseNo">
+            <label class="form-check-label" for="warehouseNo">No</label>
+          </div>
+        </div>
+
+        <h3 class="x">Transportation</h3>
+        <div class="mb25">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="transportation" id="transportationYes">
+            <label class="form-check-label" for="transportationYes">Yes</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="transportation" id="transportationNo">
+            <label class="form-check-label" for="transportationNo">No</label>
+          </div>
+        </div>
+
+        <h3 class="x">Select the commodity for your shipment</h3>
+        <p class="x">In order to offer you the best possible service and be 100% compliance, we need to know the commodity for your shipment.</p>
+        <div class="input-group mb15">
+          <select class="custom-select" id="inputGroupSelect01">
+            <option selected>Choose...</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" id="defaultInput" placeholder="Default Input" />
+        </div>
+
+        <div class="mt40 mb50 d-flex">
+          <button type="button" class="btn btn-outline-primary">
+            <i class="fa fa-angle-left"></i>
+            PREVIOUS
+          </button>
+          <button type="button" class="btn btn-primary ml-auto">
+            NEXT
+            <i class="fa fa-angle-right"></i>
+          </button>
+        </div>
+
+
+      </div>
+      <div class="col-md-5 optional-content-col-2">
+        <div class="quote-summery-box">
+asd
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS or Bootstrap.bundle JS -->
+  <script src="assets/js/jquery-3.5.1.min.js"></script>
+  <script src="assets/js/jquery-ui.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/owl.carousel.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
