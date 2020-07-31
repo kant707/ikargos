@@ -6,7 +6,10 @@
 .custom-switch .custom-control-label::after {
   top: calc(.15rem + 2px);
 }
-
+.theme-color {}
+.theme-color-2 {
+  color: #ec6729;
+}
 
 // My Reusable
 span,
@@ -96,6 +99,13 @@ svg {
   height: 20px;
   width: 20px;
 }
+.form-control,
+.custom-select {
+  &:focus {
+    border-color: #ec6729;
+    box-shadow: none;
+  }
+}
 .lh1 {
   line-height: 1;
 }
@@ -133,6 +143,29 @@ svg {
   }
   &:focus {
     outline: none;
+  }
+}
+.btn-secondary {
+  background: #ec6729;
+  border-color: #ec6729;
+  &:focus,
+  &:hover,
+  &:not(:disabled):not(.disabled):active,
+  &.active {
+    background: rgba(236, 103, 41, .9);
+    border-color: #ec6729;
+  }
+}
+.btn-outline-secondary {
+  background: #fff;
+  border-color: #ec6729;
+  color: #ec6729;
+  &:focus,
+  &:hover,
+  &:not(:disabled):not(.disabled):active,
+  &.active {
+    background: rgba(236, 103, 41, .9);
+    border-color: #ec6729;
   }
 }
 .blue1 {

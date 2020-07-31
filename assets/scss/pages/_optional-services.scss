@@ -54,21 +54,98 @@
   }
 }
 
+// accordion card-header
+.card-header {
+  .link {
+    &.collapsed {
+      .fa-minus-circle {
+        &:before {
+          content: "\f056";
+          content: "\f055";
+        }
+      }
+    }
+  }
+}
+
 // optional content
 .optional-content {
+  color: $primary-dark;
   .optional-content-col-1 {}
   .optional-content-col-2 {}
 }
 
 // .optional-content-col-1
 .optional-content-col-1 {
+  h3 {
+
+    font-size: 24px;
+    font-weight: 600;
+  }
+}
+// .shipment-information
+.shipment-information {
+  .table {
+    color: $primary-dark;
+    td {
+      padding-top: 8px;
+      padding-bottom: 8px;
+      vertical-align: middle;
+    }
+  }
+}
+// .billing-address
+.billing-address {
+  .billing-form {
+    max-width: 350px;
+  }
+}
+// .booking-confirm
+.booking-confirm {
 
 }
 
+
 // .optional-content-col-2
 .optional-content-col-2 {
-  .quote-summery-box {
+  .quote-summary-box {
     background: $main-bg;
     padding: 30px;
+
+    .heading {
+      font-size: 22px;
+      margin-bottom: 0;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #c4c4c4;
+    }
+    .name-value {
+      color: $primary-dark;
+      padding: 6px 10px;
+      .name {}
+      .value {
+        font-weight: 600;
+      }
+    }
+    .quote-summary {
+      margin-bottom: 15px;
+      .name-value {
+        //font-size: 18px;
+        .name {}
+        .value {}
+      }
+    }
+    .price-breakdown {
+      .name-value {
+        //font-size: 15px;
+        .name {}
+        .value {}
+      }
+    }
+    .price-total {
+      border-top: 1px solid #c4c4c4;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
   }
 }
