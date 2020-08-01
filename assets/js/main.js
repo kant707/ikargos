@@ -119,7 +119,6 @@ $(document).ready(function(){
     goToByScroll('resultActionsMain');
   });
 
-
   let sourceList = [
     "Spain",
     "Sweden",
@@ -137,6 +136,27 @@ $(document).ready(function(){
   });
   $("#editDestination").autocomplete({
     source: destinationList,
+  });
+
+  // Optional-Services
+  $("input[name='insure-goods']").on('change', function () {
+    let isInsureGoods = $("input[name='insure-goods']:checked").val();
+    if(isInsureGoods === 'insureGoodYes'){
+      $('.insure-goods-input').removeClass('d-none');
+    } else {
+      $('.insure-goods-input').addClass('d-none');
+    }
+  });
+
+  $('.tbl-view-detail').on('click', function () {
+    let textValue = $(this).text();
+    // alert(textValue);
+    if (textValue === '+ VIEW DETAIL') {
+      $(this).text('- HIDE DETAIL').closest('.compact-row').next('.expanded-row').toggleClass('d-none');
+    }
+    if (textValue === '- HIDE DETAIL') {
+      $(this).text('+ VIEW DETAIL').closest('.compact-row').next('.expanded-row').toggleClass('d-none');
+    }
   });
 
 });

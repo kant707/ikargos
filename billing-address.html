@@ -55,132 +55,71 @@
       </div>
     </div>
     <div class="progress-bar-wrap">
-      <div class="progress-bar" style="width: 48%"></div>
+      <div class="progress-bar" style="width: 88%"></div>
     </div>
   </div>
   <div class="container optional-content">
     <div class="row">
       <div class="col-md-6 col-lg-7 optional-content-col-1">
         <div class="optional-content-inner">
-          <div class="optional-services">
-            <h2 class="fz30 mt-5 mt-md-0">OPTIONAL SERVICES</h2>
-            <p class="mb20">Select the optional services for this booking</p>
-            <h3 class="x">Cargo Insurance</h3>
-            <p class="x">I want to insure my goods</p>
-            <div class="mb10">
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="insure-goods" value="insureGoodYes" id="insureGoodYes">
-                <label class="form-check-label" for="insureGoodYes">Yes</label>
+          <div class="billing-address">
+            <h2 class="fz30 mb-0 mt-5 mt-md-0">BILLING ADDRESS</h2>
+            <p class="x">Fill in the billing address</p>
+            <form class="billing-form">
+              <div class="form-group">
+                <label for="fullName">FULL NAME</label>
+                <input type="text" class="form-control" id="fullName" />
               </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="insure-goods" value="insureGoodNo" id="insureGoodNo">
-                <label class="form-check-label" for="insureGoodNo">No</label>
+              <div class="form-group">
+                <label for="taxId">TAX ID / PERSON ID</label>
+                <input type="text" class="form-control" id="taxId" />
               </div>
-            </div>
-            <div class="form-inline mb25 insure-goods-input d-none">
-              <input type="number" class="form-control" id="insureValue" min="0">
-              <label for="insureValue" class="col-form-label ml15">USD</label>
-            </div>
-            <h3 class="mb15">Additional Services</h3>
-            <div class="accordion mb25" id="accordionExample">
-              <div class="card">
-                <div class="card-header" id="headingOne">
-                  <h4 class="mb-0 d-flex fz15">
-                    United States
-                    <button class="link ml-auto pr0" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                      <i class="fa fa-minus-circle fz20"></i>
-                    </button>
-                  </h4>
+              <div class="form-group">
+                <label for="countrySelect">COUNTRY</label>
+                <input type="text" class="form-control" id="countrySelect" />
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-6">
+                  <label for="cityInput" class="col-form-label">CITY</label>
+                  <input type="text" class="form-control" id="cityInput" />
                 </div>
-
-                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                  <div class="card-body">
-                    <div class="form-check mb10">
-                      <input class="form-check-input" type="checkbox" id="blCourierNational">
-                      <label class="form-check-label" for="blCourierNational">B/L Courier (National)</label>
-                    </div>
-                    <div class="form-check mb10">
-                      <input class="form-check-input" type="checkbox" id="packingListCompletion">
-                      <label class="form-check-label" for="packingListCompletion">Packing list completion</label>
-                    </div>
-                    <div class="form-check mb10">
-                      <input class="form-check-input" type="checkbox" id="blCourierInternational">
-                      <label class="form-check-label" for="blCourierInternational">B/L Courier (International)</label>
-                    </div>
-                    <div class="form-check mb10">
-                      <input class="form-check-input" type="checkbox" id="validationOfTitles">
-                      <label class="form-check-label" for="validationOfTitles">Validation of titles</label>
-                    </div>
-                    <div class="form-check mb10">
-                      <input class="form-check-input" type="checkbox" id="exportCertificateDocs">
-                      <label class="form-check-label" for="exportCertificateDocs">Export certificate docs</label>
-                    </div>
-                    <div class="form-check mb10">
-                      <input class="form-check-input" type="checkbox" id="certificateOfOrigin">
-                      <label class="form-check-label" for="certificateOfOrigin">Certificate of origin</label>
-                    </div>
-                  </div>
+                <div class="col-sm-6">
+                  <label for="zipCodeInput" class="col-form-label">ZIP CODE</label>
+                  <input type="text" class="form-control" id="zipCodeInput" />
                 </div>
               </div>
-            </div>
+              <div class="form-group">
+                <label for="addressLine1">ADDRESS LINE 1</label>
+                <input type="text" class="form-control" id="addressLine1" />
+              </div>
+              <div class="form-group">
+                <label for="addressLine2">ADDRESS LINE 2</label>
+                <input type="text" class="form-control" id="addressLine2" />
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-5">
+                  <label for="countryCode" class="col-form-label">COUNTRY CODE</label>
+                  <input type="text" class="form-control" id="countryCode" />
+                </div>
+                <div class="col-sm-7">
+                  <label for="phoneNo" class="col-form-label">PHONE NO.</label>
+                  <input type="text" class="form-control" id="phoneNo" />
+                </div>
+              </div>
+              <div class="d-flex">
+                <button class="btn btn-outline-secondary btn-sm mr15" type="button">CANCEL</button>
+                <button class="btn btn-secondary btn-sm ml-auto">SAVE</button>
+              </div>
 
-            <h3 class="x">Custom clearance</h3>
-            <div class="mb25">
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="custom-clearance" id="customClearanceYes">
-                <label class="form-check-label" for="customClearanceYes">Yes</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="custom-clearance" id="customClearanceNo">
-                <label class="form-check-label" for="customClearanceNo">No</label>
-              </div>
-            </div>
+            </form>
+          </div><!-- END billing-address -->
 
-            <h3 class="x">Warehouse</h3>
-            <p class="x">We offer you the option to use our warehouse for storing your goods.</p>
-            <div class="mb25">
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="warehouse" id="warehouseYes">
-                <label class="form-check-label" for="warehouseYes">Yes</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="warehouse" id="warehouseNo">
-                <label class="form-check-label" for="warehouseNo">No</label>
-              </div>
-            </div>
-
-            <h3 class="x">Transportation</h3>
-            <div class="mb25">
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="transportation" id="transportationYes">
-                <label class="form-check-label" for="transportationYes">Yes</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="transportation" id="transportationNo">
-                <label class="form-check-label" for="transportationNo">No</label>
-              </div>
-            </div>
-
-            <h3 class="x">Select the commodity for your shipment</h3>
-            <p class="x">In order to offer you the best possible service and be 100% compliance, we need to know the commodity for your shipment.</p>
-            <div class="input-group mb15">
-              <select class="custom-select" id="inputGroupSelect01">
-                <option selected>Others</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" id="defaultInput" placeholder="Default Input" />
-            </div>
-          </div> <!-- END optional-services -->
           <div class="mt40 mb50 d-flex">
-            <a href="index.html" class="btn btn-outline-secondary" style="min-width: 115px;">
+            <a href="shipment-information.html" class="btn btn-outline-secondary" style="min-width: 115px;">
               <i class="fa fa-angle-left"></i>
               PREVIOUS
             </a>
-            <a href="shipment-information.html" class="btn btn-secondary ml-auto" style="min-width: 115px;">
+            <a href="booking-confirm.html" class="btn btn-secondary ml-auto" style="min-width: 115px;">
               NEXT
               <i class="fa fa-angle-right"></i>
             </a>

@@ -77,6 +77,9 @@
 
 // .optional-content-col-1
 .optional-content-col-1 {
+  .optional-content-inner {
+    max-width: 560px;
+  }
   h3 {
 
     font-size: 24px;
@@ -91,6 +94,24 @@
       padding-top: 8px;
       padding-bottom: 8px;
       vertical-align: middle;
+    }
+    .compact-row {
+      &.odd {
+        background-color: #fff;
+      }
+    }
+    .expanded-row {
+      >td {
+        background: #fff;
+        border: none;
+        padding: 0;
+      }
+      tr {
+        background: #fff;
+        td {
+          padding: 10px 5px;
+        }
+      }
     }
   }
 }
