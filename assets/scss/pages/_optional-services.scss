@@ -6,6 +6,10 @@
   .navbar {
     position: static;
     background: $primary-dark;
+    @media (max-width: 575px) {
+    padding-right: 0;
+    padding-left: 0;
+    }
   }
 }
 
