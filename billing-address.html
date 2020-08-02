@@ -24,7 +24,7 @@
       <div class="row">
         <nav class="navbar navbar-expand-md w-100 d-flex">
           <a class="navbar-brand" href="#">
-            <img src="assets/images/logo.png" class="brand-logo" alt="">
+            <img src="assets/images/logo_white.png" class="brand-logo" alt="">
           </a>
           <a class="link ml-auto" href="#">LOGOUT</a>
         </nav>
@@ -89,7 +89,15 @@
               <div class="form-group row">
                 <div class="col-sm-5">
                   <label for="countryCode" class="col-form-label">COUNTRY CODE</label>
-                  <input type="text" class="form-control" id="countryCode" />
+                  <div class="input-group mb15">
+                    <select class="custom-select" id="countryCode">
+                      <option selected>+91</option>
+                      <option value="1">+90</option>
+                      <option value="2">+92</option>
+                      <option value="3">+98</option>
+                    </select>
+                  </div>
+<!--                  <input type="text" class="form-control" id="countryCode" />-->
                 </div>
                 <div class="col-sm-7">
                   <label for="phoneNo" class="col-form-label">PHONE NO.</label>

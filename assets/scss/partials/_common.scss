@@ -171,6 +171,9 @@ svg {
 }
 .blue1 {
   color: #146fb7;
+  &:hover {
+    color: #146fb7;
+  }
 }
 .underline {
   cursor: pointer;

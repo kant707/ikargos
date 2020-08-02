@@ -148,9 +148,30 @@ $(document).ready(function(){
     }
   });
 
+  // Reusable additional services price add
+  function additionalServicesPriceToggle(inputId, priceWrapId) {
+    $(inputId).on('click', function () {
+      if ($(inputId).is(':checked')) {
+        // Do stuff
+        $(priceWrapId).toggleClass('d-flex');
+        setTimeout(function () {
+          $(priceWrapId).removeClass('font-weight-bold');
+        }, 5000);
+      } else {
+        $(priceWrapId).addClass('font-weight-bold').toggleClass('d-flex');
+      }
+    });
+  }
+
+  additionalServicesPriceToggle('#blCourierNational', '#blCourierNationalLabel');
+  additionalServicesPriceToggle('#packingListCompletion', '#packingListCompletionLabel');
+  additionalServicesPriceToggle('#blCourierInternational', '#blCourierInternationalLabel');
+  additionalServicesPriceToggle('#validationOfTitles', '#validationOfTitlesLabel');
+  additionalServicesPriceToggle('#exportCertificateDocs', '#exportCertificateDocsLabel');
+  additionalServicesPriceToggle('#certificateOfOrigin', '#certificateOfOriginLabel');
+
   $('.tbl-view-detail').on('click', function () {
     let textValue = $(this).text();
-    // alert(textValue);
     if (textValue === '+ VIEW DETAIL') {
       $(this).text('- HIDE DETAIL').closest('.compact-row').next('.expanded-row').toggleClass('d-none');
     }

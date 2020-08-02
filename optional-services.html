@@ -24,7 +24,7 @@
       <div class="row">
         <nav class="navbar navbar-expand-md w-100 d-flex">
           <a class="navbar-brand" href="#">
-            <img src="assets/images/logo.png" class="brand-logo" alt="">
+            <img src="assets/images/logo_white.png" class="brand-logo" alt="">
           </a>
           <a class="link ml-auto" href="#">LOGOUT</a>
         </nav>
@@ -53,7 +53,7 @@
       <div class="col-md-6 col-lg-8 optional-content-col-1">
         <div class="optional-content-inner">
           <div class="optional-services">
-            <h2 class="fz30 mt-5 mt-md-0">OPTIONAL SERVICES</h2>
+            <h2 class="fz30 mt-5 mt-md-0">OPTIONAL services</h2>
             <p class="mb20">Select the optional services for this booking</p>
             <h3 class="x">Cargo Insurance</h3>
             <p class="x">I want to insure my goods</p>
@@ -72,41 +72,41 @@
               <label for="insureValue" class="col-form-label ml15">USD</label>
             </div>
             <h3 class="mb15">Additional Services</h3>
-            <div class="accordion mb25" id="accordionExample">
+            <div class="accordion mb25" id="additionalServicesAccordion">
               <div class="card">
                 <div class="card-header" id="headingOne">
                   <h4 class="mb-0 d-flex fz15">
                     United States
-                    <button class="link ml-auto pr0" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <button class="link ml-auto pr0" type="button" data-toggle="collapse" data-target="#additionalServices" aria-expanded="true" aria-controls="additionalServices">
                       <i class="fa fa-minus-circle fz20 blue1"></i>
                     </button>
                   </h4>
                 </div>
 
-                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div id="additionalServices" class="collapse show" aria-labelledby="headingOne" data-parent="#additionalServicesAccordion">
                   <div class="card-body">
                     <div class="form-check mb10">
-                      <input class="form-check-input" type="checkbox" id="blCourierNational">
+                      <input class="form-check-input" name="additionalServicesCheckbox" type="checkbox" id="blCourierNational">
                       <label class="form-check-label" for="blCourierNational">B/L Courier (National)</label>
                     </div>
                     <div class="form-check mb10">
-                      <input class="form-check-input" type="checkbox" id="packingListCompletion">
+                      <input class="form-check-input" name="additionalServicesCheckbox" type="checkbox" id="packingListCompletion">
                       <label class="form-check-label" for="packingListCompletion">Packing list completion</label>
                     </div>
                     <div class="form-check mb10">
-                      <input class="form-check-input" type="checkbox" id="blCourierInternational">
+                      <input class="form-check-input" name="additionalServicesCheckbox" type="checkbox" id="blCourierInternational">
                       <label class="form-check-label" for="blCourierInternational">B/L Courier (International)</label>
                     </div>
                     <div class="form-check mb10">
-                      <input class="form-check-input" type="checkbox" id="validationOfTitles">
+                      <input class="form-check-input" name="additionalServicesCheckbox" type="checkbox" id="validationOfTitles">
                       <label class="form-check-label" for="validationOfTitles">Validation of titles</label>
                     </div>
                     <div class="form-check mb10">
-                      <input class="form-check-input" type="checkbox" id="exportCertificateDocs">
+                      <input class="form-check-input" name="additionalServicesCheckbox" type="checkbox" id="exportCertificateDocs">
                       <label class="form-check-label" for="exportCertificateDocs">Export certificate docs</label>
                     </div>
                     <div class="form-check mb10">
-                      <input class="form-check-input" type="checkbox" id="certificateOfOrigin">
+                      <input class="form-check-input" name="additionalServicesCheckbox" type="checkbox" id="certificateOfOrigin">
                       <label class="form-check-label" for="certificateOfOrigin">Certificate of origin</label>
                     </div>
                   </div>
@@ -214,7 +214,7 @@
               <span class="value ml-auto">-</span>
             </div>
           </div>
-          <div class="x" id="priceBreakdown">
+          <div class="" id="priceBreakdown">
             <h4 class="heading d-flex align-items-center">
               Price Breakdown
               <i class="fa fa-angle-down ml-auto link fz28 prl10" data-toggle="collapse" data-target="#priceBreakdownOne" aria-expanded="true" aria-controls="priceBreakdownOne"></i>
@@ -239,6 +239,32 @@
               <div class="d-flex name-value">
                 <span class="name mr10">BL US DOC FEE (US)</span>
                 <span class="value ml-auto">$82.50</span>
+              </div>
+              <div class="additionalServicesWrap">
+                <div class="name-value font-weight-bold" id="blCourierNationalLabel">
+                  <span class="name mr10">B/L Courier (National)</span>
+                  <span class="value ml-auto">$11.00</span>
+                </div>
+                <div class="name-value font-weight-bold" id="packingListCompletionLabel">
+                  <span class="name mr10">Packing list completion</span>
+                  <span class="value ml-auto">$12.50</span>
+                </div>
+                <div class="name-value font-weight-bold" id="blCourierInternationalLabel">
+                  <span class="name mr10">B/L Courier (International)</span>
+                  <span class="value ml-auto">$14.00</span>
+                </div>
+                <div class="name-value font-weight-bold" id="validationOfTitlesLabel">
+                  <span class="name mr10">Validation of titles</span>
+                  <span class="value ml-auto">$16.50</span>
+                </div>
+                <div class="name-value font-weight-bold" id="exportCertificateDocsLabel">
+                  <span class="name mr10">Export certificate docs</span>
+                  <span class="value ml-auto">$18.00</span>
+                </div>
+                <div class="name-value font-weight-bold" id="certificateOfOriginLabel">
+                  <span class="name mr10">Certificate of origin</span>
+                  <span class="value ml-auto">$20.50</span>
+                </div>
               </div>
             </div>
             <div class="price-total">
