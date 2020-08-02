@@ -179,3 +179,17 @@ svg {
   cursor: pointer;
   text-decoration: underline;
 }
+.pagination {
+  .page-item {
+    &.active {
+      .page-link {
+        background: #ec6729;
+        border-color: #ec6729;
+        color: $white;
+      }
+    }
+    .page-link {
+      color: $primary-dark;
+    }
+  }
+}
