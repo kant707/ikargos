@@ -83,7 +83,7 @@
 // .optional-content-col-1
 .optional-content-col-1 {
   .optional-content-inner {
-    max-width: 560px;
+    max-width: 700px;
   }
   h3 {
 
@@ -136,10 +136,11 @@
 .optional-content-col-2 {
   .quote-summary-box {
     background: $main-bg;
-    padding: 30px;
+    padding: 20px 15px;
+    font-size: 12px;
 
     .heading {
-      font-size: 22px;
+      font-size: 20px;
       margin-bottom: 0;
       padding-bottom: 10px;
       border-bottom: 1px solid #c4c4c4;
