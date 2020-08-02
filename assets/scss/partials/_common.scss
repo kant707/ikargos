@@ -186,6 +186,9 @@ svg {
         background: #ec6729;
         border-color: #ec6729;
         color: $white;
+        &:focus {
+          box-shadow: none;
+        }
       }
     }
     .page-link {
