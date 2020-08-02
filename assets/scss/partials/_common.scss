@@ -193,6 +193,9 @@ svg {
     }
     .page-link {
       color: $primary-dark;
+      &:focus {
+        box-shadow: none;
+      }
     }
   }
 }
