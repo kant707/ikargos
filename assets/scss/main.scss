@@ -34,7 +34,12 @@ input[type=number].num::-webkit-outer-spin-button {
   font-size: inherit;
 
   &.show {
-    animation:dropdown-display .4s cubic-bezier(.73,.005,.22,1)
+    animation:dropdown-display .4s cubic-bezier(.73,.005,.22,1);
+
+    .apply-for:hover {
+      background: #ec6729;
+      color: #fff;
+    }
   }
   @keyframes dropdown-display {
     0%{
@@ -151,6 +156,10 @@ input[type=number].num::-webkit-outer-spin-button {
         .dropdown-item.dropdown-item,
         .nav-link.nav-link {
           color: #606060;
+          &.apply-for {
+            background: #ec6729;
+            color: #fff;
+          }
         }
       }
     }
@@ -202,6 +211,12 @@ input[type=number].num::-webkit-outer-spin-button {
 
         &:hover {
           color: #ec6729;
+        }
+        &.apply-for {
+          &:hover {
+            background: #ec6729;
+            color: #fff;
+          }
         }
       }
       .dropdown-item {
