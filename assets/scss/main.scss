@@ -159,6 +159,7 @@ input[type=number].num::-webkit-outer-spin-button {
           &.apply-for {
             background: #ec6729;
             color: #fff;
+            margin-left: 0;
           }
         }
       }
@@ -213,6 +214,7 @@ input[type=number].num::-webkit-outer-spin-button {
           color: #ec6729;
         }
         &.apply-for {
+          margin-left: 15px;
           &:hover {
             background: #ec6729;
             color: #fff;
